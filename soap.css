@@ -1,0 +1,280 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);html{height:100%;}
+body{background:#bcdee7 url("images/back.jpg") no-repeat center center fixed;position:fixed;padding:0px;margin:0px;width:100%;height:100%;font:normal 14px/1.618em "Roboto", sans-serif;-webkit-font-smoothing:antialiased;}
+body:before{content:"";height:0px;padding:0px;border:110em solid #000;position:absolute;left:50%;top:100%;z-index:2;display:block;-webkit-border-radius:50%;border-radius:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-animation:puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;animation:puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;}
+h1, h2{font-weight:500;margin:0px 0px 5px 0px;}
+h1 {
+  font-size: 24px;
+}
+h2{font-size:16px;}
+p{margin:0px;}
+.profile-card{background:#ec1c24;width:56px;height:56px;position:absolute;left:50%;top:50%;z-index:2;overflow:hidden;opacity:0;margin-top:70px;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-border-radius:50%;border-radius:50%;-webkit-box-shadow:0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);box-shadow:0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);-webkit-animation:init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;animation:init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;}
+.profile-card header{width:179px;height:280px;padding:40px 20px 30px 20px;display:inline-block;float:left;border-right:2px dashed #EEEEEE;background:#1f1f1f;color:#FFFFFF;margin-top:50px;opacity:0;text-align:center;-webkit-animation:moveIn 1s 3.1s ease forwards;animation:moveIn 1s 3.1s ease forwards;}
+.profile-card header h1{color:##2196f3;}
+.profile-card header a{display:inline-block;text-align:center;position:relative;margin:25px 30px;}
+.profile-card header a > img{width:120px;max-width:100%;-webkit-border-radius:50%;border-radius:50%;-webkit-transition:-webkit-box-shadow 0.3s ease;transition:box-shadow 0.3s ease;-webkit-box-shadow:0px 0px 0px 8px rgba(0, 0, 0, 0.06);box-shadow:0px 0px 0px 8px rgba(0, 0, 0, 0.06);}
+.profile-card header a:hover > img{-webkit-box-shadow:0px 0px 0px 12px rgba(0, 0, 0, 0.1);box-shadow:0px 0px 0px 12px rgba(0, 0, 0, 0.1);}
+.profile-card .profile-bio{width:175px;height:180px;display:inline-block;float:right;padding:50px 20px 30px 20px;background:#191c1b;color:#FFFFFF;margin-top:50px;text-align:center;opacity:0;-webkit-animation:moveIn 1s 3.1s ease forwards;animation:moveIn 1s 3.1s ease forwards;}
+.profile-social-links{width:218px;display:inline-block;float:right;margin:0px;padding:15px 20px;background:#191c1b;margin-top:50px;text-align:center;opacity:0;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-animation:moveIn 1s 3.1s ease forwards;animation:moveIn 1s 3.1s ease forwards;}
+.profile-social-links li{list-style:none;margin:-5px 0px 0px 0px;padding:0px;float:left;width:33.3%;text-align:center;}
+.profile-social-links li a{display:inline-block;width:24px;height:24px;padding:6px;position:relative;overflow:hidden!important;-webkit-border-radius:50%;border-radius:50%;}
+.profile-social-links li a img{position:relative;z-index:1;}
+.profile-social-links li a:before{display:block;content:"";background:rgba(0, 0, 0, 0.3);position:absolute;left:0px;top:0px;width:36px;height:36px;opacity:1;-webkit-transition:transform 0.4s ease, opacity 1s ease-out;transition:transform 0.4s ease, opacity 1s ease-out;-webkit-transform:scale3d(0, 0, 1);transform:scale3d(0, 0, 1);-webkit-border-radius:50%;border-radius:50%;}
+.profile-social-links li a:hover:before{-webkit-animation:ripple 1s ease forwards;animation:ripple 1s ease forwards;}
+.profile-social-links li a img, .profile-social-links li a svg{width:24px;}
+@-webkit-keyframes init{0%{width:0px;height:0px;}
+100%{width:56px;height:56px;margin-top:0px;opacity:1;}
+}
+@keyframes init{0%{width:0px;height:0px;}
+100%{width:56px;height:56px;margin-top:0px;opacity:1;}
+}
+@-webkit-keyframes puff{0%{top:100%;height:0px;padding:0px;}
+100%{top:50%;height:100%;padding:0px 100%;}
+}
+@keyframes puff{0%{top:100%;height:0px;padding:0px;}
+100%{top:50%;height:100%;padding:0px 100%;}
+}
+@-webkit-keyframes borderRadius{0%{-webkit-border-radius:50%;}
+100%{-webkit-border-radius:0px;}
+}
+@keyframes borderRadius{0%{-webkit-border-radius:50%;}
+100%{border-radius:0px;}
+}
+@-webkit-keyframes moveDown{0%{top:50%;}
+50%{top:40%;}
+100%{top:100%;}
+}
+@keyframes moveDown{0%{top:50%;}
+50%{top:40%;}
+100%{top:100%;}
+}
+@-webkit-keyframes moveUp{0%{background:#ffd600;top:100%;}
+50%{top:40%;}
+100%{top:50%;background:#E0E0E0;}
+}
+@keyframes moveUp{0%{background:#ffd600;top:100%;}
+50%{top:40%;}
+100%{top:50%;background:#ffd600;}
+}
+@-webkit-keyframes materia{0%{background:#ffd600;}
+50%{-webkit-border-radius:4px;}
+100%{width:440px;height:280px;background:#191c1b;-webkit-border-radius:4px;}
+}
+@keyframes materia{0%{background:#E0E0E0;}
+50%{border-radius:4px;}
+100%{width:440px;height:280px;background:#191c1b;border-radius:4px;}
+}
+@-webkit-keyframes moveIn{0%{margin-top:50px;opacity:0;}
+100%{opacity:1;margin-top:-20px;}
+}
+@keyframes moveIn{0%{margin-top:50px;opacity:0;}
+100%{opacity:1;margin-top:-20px;}
+}
+@-webkit-keyframes scaleIn{0%{-webkit-transform:scale(0);}
+100%{-webkit-transform:scale(1);}
+}
+@keyframes scaleIn{0%{transform:scale(0);}
+100%{transform:scale(1);}
+}
+@-webkit-keyframes ripple{0%{transform:scale3d(0, 0, 0);}
+50%, 100%{-webkit-transform:scale3d(1, 1, 1);}
+100%{opacity:0;}
+}
+@keyframes ripple{0%{transform:scale3d(0, 0, 0);}
+50%, 100%{transform:scale3d(1, 1, 1);}
+100%{opacity:0;}
+}
+@media screen and (min-aspect-ratio:4/3){body{background-size:100% auto;}
+body:before{width:0px;}
+@-webkit-keyframes puff{0%{top:100%;width:0px;padding-bottom:0px;}
+100%{top:50%;width:100%;padding-bottom:100%;}
+}
+@keyframes puff{0%{top:100%;width:0px;padding-bottom:0px;}
+100%{top:50%;width:100%;padding-bottom:100%;}
+}
+}
+@media screen and (min-height:480px){.profile-card header{width:auto;height:auto;padding:30px 20px;display:block;float:none;border-right:none;}
+.profile-card .profile-bio{width:auto;height:auto;padding:15px 20px 30px 20px;display:block;float:none;}
+.profile-social-links{width:100%;display:block;float:none;}
+@-webkit-keyframes materia{0%{background:#E0E0E0;}
+50%{-webkit-border-radius:4px;}
+100%{width:280px;height:440px;background:#191c1b;-webkit-border-radius:4px;}
+}
+@keyframes materia{0%{background:#ffd600;}
+50%{border-radius:4px;}
+100%{width:330px;height:490px;background:#191c1b;border-radius:4px;}
+}
+}
+
+
+.glitch {
+      
+      font-size: 25px;
+      margin: 0 auto;
+      width: 200px;
+ 
+    }
+    
+    /* Real glitch effect */
+    .glitch {
+      position: relative;
+    }
+    
+    .glitch:after {
+      animation: glitch-animation 2s infinite linear alternate-reverse;
+      
+      clip: rect( 0, 900px, 0, 0 );
+      color: white;
+      content: attr( data-text );
+      left: 35px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: -1px 0 red;
+      top: 0;
+    }
+
+    .glitch:before {
+      animation: glitch-animation-2 3s infinite linear alternate-reverse;
+      
+      clip: rect( 0, 900px, 0, 0 );
+      color: white;
+      content: attr( data-text );
+      left: 32px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: 1px 0 blue;
+      top: 0;
+    }
+
+    /* Expanded Animations */
+    @keyframes glitch-animation {
+      0% {
+        clip: rect(42px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(12px, 9999px, 59px, 0);
+      }
+      10% {
+        clip: rect(48px, 9999px, 29px, 0);
+      }
+      15.0% {
+        clip: rect(42px, 9999px, 73px, 0);
+      }
+      20% {
+        clip: rect(63px, 9999px, 27px, 0);
+      }
+      25% {
+        clip: rect(34px, 9999px, 55px, 0);
+      }
+      30.0% {
+        clip: rect(86px, 9999px, 73px, 0);
+      }
+      35% {
+        clip: rect(20px, 9999px, 20px, 0);
+      }
+      40% {
+        clip: rect(26px, 9999px, 60px, 0);
+      }
+      45% {
+        clip: rect(25px, 9999px, 66px, 0);
+      }
+      50% {
+        clip: rect(57px, 9999px, 98px, 0);
+      }
+      55.0% {
+        clip: rect(5px, 9999px, 46px, 0);
+      }
+      60.0% {
+        clip: rect(82px, 9999px, 31px, 0);
+      }
+      65% {
+        clip: rect(54px, 9999px, 27px, 0);
+      }
+      70% {
+        clip: rect(28px, 9999px, 99px, 0);
+      }
+      75% {
+        clip: rect(45px, 9999px, 69px, 0);
+      }
+      80% {
+        clip: rect(23px, 9999px, 85px, 0);
+      }
+      85.0% {
+        clip: rect(54px, 9999px, 84px, 0);
+      }
+      90% {
+        clip: rect(45px, 9999px, 47px, 0);
+      }
+      95% {
+        clip: rect(37px, 9999px, 20px, 0);
+      }
+      100% {
+        clip: rect(4px, 9999px, 91px, 0);
+      }
+    }
+
+    @keyframes glitch-animation-2 {
+      0% {
+        clip: rect(65px, 9999px, 100px, 0);
+      }
+      5% {
+        clip: rect(52px, 9999px, 74px, 0);
+      }
+      10% {
+        clip: rect(79px, 9999px, 85px, 0);
+      }
+      15.0% {
+        clip: rect(75px, 9999px, 5px, 0);
+      }
+      20% {
+        clip: rect(67px, 9999px, 61px, 0);
+      }
+      25% {
+        clip: rect(14px, 9999px, 79px, 0);
+      }
+      30.0% {
+        clip: rect(1px, 9999px, 66px, 0);
+      }
+      35% {
+        clip: rect(86px, 9999px, 30px, 0);
+      }
+      40% {
+        clip: rect(23px, 9999px, 98px, 0);
+      }
+      45% {
+        clip: rect(85px, 9999px, 72px, 0);
+      }
+      50% {
+        clip: rect(71px, 9999px, 75px, 0);
+      }
+      55.0% {
+        clip: rect(2px, 9999px, 48px, 0);
+      }
+      60.0% {
+        clip: rect(30px, 9999px, 16px, 0);
+      }
+      65% {
+        clip: rect(59px, 9999px, 50px, 0);
+      }
+      70% {
+        clip: rect(41px, 9999px, 62px, 0);
+      }
+      75% {
+        clip: rect(2px, 9999px, 82px, 0);
+      }
+      80% {
+        clip: rect(47px, 9999px, 73px, 0);
+      }
+      85.0% {
+        clip: rect(3px, 9999px, 27px, 0);
+      }
+      90% {
+        clip: rect(26px, 9999px, 55px, 0);
+      }
+      95% {
+        clip: rect(42px, 9999px, 97px, 0);
+      }
+      100% {
+        clip: rect(38px, 9999px, 49px, 0);
+      }
+    }
